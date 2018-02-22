@@ -1,3 +1,6 @@
-# English strings go here for Rails i18n
+# Redmine German translation:
+# by Uwe Heber
+
 en:
-  # my_label: "My label"
+  title_project_link_show_subprojects: "Show sub project(s)"
+  title_project_link_hide_subprojects: "Hide sub project(s)"

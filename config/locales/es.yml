@@ -1,0 +1,6 @@
+# Redmine Spanish translation:
+# by Uwe Heber
+
+es:
+  title_project_link_show_subprojects: "Mostrar subproyecto(s)"
+  title_project_link_hide_subprojects: "Ocultar  subproyecto(s)"
