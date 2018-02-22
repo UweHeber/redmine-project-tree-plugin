@@ -1,0 +1,21 @@
+<% content_for :header_tags do %>
+    <%= stylesheet_link_tag 'plugin.project_tree.css', :plugin => 'project_tree' %>
+    <%= javascript_include_tag 'plugin.project_tree.js', :plugin => 'project_tree'%>
+<% end %>
+
+
+<h2><%= l(:label_project_plural)%></h2>
+
+
+<ul class="tree">
+<% for project in top_projects %>
+    <% if project.children.length > 0 %>
+    <li class="project root parent"><span class="toggle collapsed" id="<%= project.id %>" title="Unterprojekt(e) anzeigen"></span><%= link_to_project(project) %></li>
+    <% else %>
+    <li class="project root parent"><span class="spacer"></span><%= link_to_project(project) %></li>
+    <% end %>   
+<% end %>
+</ul>
+
+<hr />
+

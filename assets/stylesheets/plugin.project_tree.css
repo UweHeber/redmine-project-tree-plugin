@@ -1,0 +1,63 @@
+/** 1st level */
+ul.tree {
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+ul.tree li.root a {
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em; 
+}
+
+ul.tree li.root:nth-child(odd) {
+    background-color: #f6f7f8;
+}
+
+ul.tree li.root:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/** 2nd and further level */
+ul.tree ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+ul.tree li.child a {
+    font-family: Verdana, sans-serif;
+    font-size: 12px;  
+    line-height: 1.6em; 
+}
+
+/** 1st and 2nd level */
+ul.tree > li,
+ul.tree > li > ul > li {
+    font-weight: bold;
+}
+
+/** 3rd and further level */
+ul.tree > li > ul > li > ul > li{
+    font-weight: normal;
+}
+
+/** all level */
+ul.tree li span.toggle {
+    cursor: pointer; 
+    padding-left: 24px;
+}
+
+ul.tree li span.toggle.collapsed {
+    background: url(../images/arrow_collapsed.png) no-repeat 0 60%; 
+    background-size: 20px 20px;
+}
+ul.tree li span.toggle.expanded {
+    background: url(../images/arrow_expanded.png) no-repeat 0 60%; 
+    background-size: 20px 20px;
+}
+
+ul.tree li span.spacer {
+    width: 24px;  
+    display: inline-block;
+    content: ' '
+}
