@@ -3,19 +3,22 @@
     <%= javascript_include_tag 'plugin.project_tree.js', :plugin => 'project_tree'%>
 <% end %>
 
+<script>
+    <!-- Project TreeView variables -->
+    var titleHideSubProjects = "<%= l(:title_project_link_hide_subprojects)%>";
+    var titleShowSubProjects = "<%= l(:title_project_link_show_subprojects)%>";
+</script>
+
 
 <h2><%= l(:label_project_plural)%></h2>
-
 
 <ul class="tree">
 <% for project in top_projects %>
     <% if project.children.length > 0 %>
-    <li class="project root parent"><span class="toggle collapsed" id="<%= project.id %>" title="Unterprojekt(e) anzeigen"></span><%= link_to_project(project) %></li>
+    <li class="project root parent"><span class="toggle collapsed" id="<%= project.id %>" title="<%= l(:title_project_link_show_subprojects)%>"></span><%= link_to_project(project) %></li>
     <% else %>
     <li class="project root parent"><span class="spacer"></span><%= link_to_project(project) %></li>
     <% end %>   
 <% end %>
 </ul>
-
-<hr />
 

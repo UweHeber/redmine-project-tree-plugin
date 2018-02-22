@@ -17,6 +17,7 @@ $(document).ready(function () {
     });
 });
 
+
 /**
  * show or hide the child projects for the given project
  * 
@@ -27,11 +28,11 @@ function showHideChildren(project) {
     var projectName = project.text();
     if (project.hasClass("collapsed")) {
         project.addClass("expanded").removeClass("collapsed");
-        project.attr("title", "Unterprojekt(e) ausblenden");
+        project.attr("title", titleHideSubProjects);
         addChildren(project);
     } else {
         project.addClass("collapsed").removeClass("expanded");
-        project.attr("title", "Unterprojekt(e) einblenden");
+        project.attr("title", titleShowSubProjects);
         removeChildren(project);
     }
 }
@@ -85,7 +86,7 @@ function buildProjectList(children, projectId) {
         var listItem = $('<li class="project child"/>');
 
         if (child.has_children) {
-            var span = $('<span class="toggle collapsed" id="' + child.identifier + '" title="Unterprojekt(e) anzeigen"/>');
+            var span = $('<span class="toggle collapsed" id="' + child.identifier + '" title="' + titleShowSubProjects + '"/>');
             listItem.append(span);
             // add event listener
             $(span).click(function () {
