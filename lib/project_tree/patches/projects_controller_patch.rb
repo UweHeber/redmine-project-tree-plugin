@@ -9,7 +9,7 @@ module ProjectTree
                 base.class_eval do
                     unloadable
                     #the before_filter is who gives the authorization to execute the function
-					before_filter :authorize, :except => [ :index, :children, :autocomplete, :list, :new, :create, :copy ]
+					before_filter :authorize, :except => [ :index, :children, :autocomplete, :list, :new, :create, :copy, :archive ]
                 end
             end
             
