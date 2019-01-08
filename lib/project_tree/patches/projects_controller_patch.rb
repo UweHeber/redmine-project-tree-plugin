@@ -10,10 +10,6 @@ module ProjectTree
                     unloadable
                     #the before_filter is who gives the authorization to execute the function
                     before_filter :authorize, :except => [ :index, :children, :autocomplete, :list, :new, :create, :copy, :archive, :unarchive, :destroy ]
-<<<<<<< HEAD
-=======
-                    
->>>>>>> 31b47c6afe4530f64802a925a8e715fd7c8a7c87
                 end
             end
             
@@ -28,11 +24,8 @@ module ProjectTree
                     # encapsulates all children of current project
                     children = []
                     
-<<<<<<< HEAD
                     project.children.each do |child|
-=======
-                    project.children.each do |child| 
->>>>>>> 31b47c6afe4530f64802a925a8e715fd7c8a7c87
+
                         # return only active projects to the result
                         if child.status == 1
                             entry = {}
