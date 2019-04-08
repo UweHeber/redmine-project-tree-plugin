@@ -8,8 +8,8 @@ module ProjectTree
                 base.send(:include, InstanceMethods)
                 base.class_eval do
                     unloadable
-                    #the before_filter is who gives the authorization to execute the function
-                    before_filter :authorize, :except => [ :index, :children, :autocomplete, :list, :new, :create, :copy, :archive, :unarchive, :destroy ]
+                    #the before_action is who gives the authorization to execute the function
+                    before_action :authorize, :except => [ :index, :children, :autocomplete, :list, :new, :create, :copy, :archive, :unarchive, :destroy ]
                 end
             end
             
