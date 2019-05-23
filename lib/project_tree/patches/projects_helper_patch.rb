@@ -33,7 +33,8 @@ module ProjectTree
                             #{Project.table_name} p
                         where
                             p.parent_id is null
-                            and p.status = 1")
+                            and p.status = 1 
+                        order by p.name")
                     
                     # load project as object and store it to the result
                     result = []
