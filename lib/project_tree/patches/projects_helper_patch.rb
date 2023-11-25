@@ -55,4 +55,4 @@ module ProjectTree
     end
 end
 
-ProjectsHelper.send(:include, ProjectTree::Patches::ProjectsHelperPatch)
+ProjectsHelper.send(:include, ::ProjectTree::Patches::ProjectsHelperPatch)

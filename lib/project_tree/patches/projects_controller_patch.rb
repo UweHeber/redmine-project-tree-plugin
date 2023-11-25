@@ -45,4 +45,4 @@ module ProjectTree
     end
 end
 
-ProjectsController.send(:include, ProjectTree::Patches::ProjectsControllerPatch)
+ProjectsController.send(:include, ::ProjectTree::Patches::ProjectsControllerPatch)
